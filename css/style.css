@@ -1,0 +1,63 @@
+body {
+    width: 100%;
+    background-color: black;
+}
+.container{
+    margin-left: 37%;
+    display: inline-block;
+    color: white;
+    font-size: 35px;
+    position: relative;
+    animation-name: head;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.container:hover{
+    background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+    border-radius: 10px;
+}
+@keyframes head {
+    0%{top: -60px;}
+    100%{top: 80px;}
+}
+.loading p{
+    color: white;
+    margin-top: 120px;
+    font-size: 30px;
+    margin-top: 120px;
+    text-align: center;
+    position: relative;
+    animation-name: loading;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+@keyframes loading {
+    0%{left: -1000px;}
+    100%{left: 0;}
+}
+.spinner {
+    width: 50px;
+    height: 50px;
+    margin-top: 110px;
+    margin-left: 50px;
+    position: relative;
+}
+.spinner div {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 6px solid transparent;
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spinnerOne 1.2s linear infinite;
+}
+@keyframes spinnerOne {
+    0% { transform: rotate(0deg); border-width: 10px; }
+    50% { transform: rotate(180deg); border-width: 1px; }
+    100% { transform: rotate(360deg); border-width: 10px; }
+}
+.loading {
+    display: flex;
+    justify-content: center;
+}
