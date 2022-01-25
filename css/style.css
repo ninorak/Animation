@@ -2,8 +2,11 @@ body {
     width: 100%;
     background-color: #000000;
 }
+.section-1{
+	width: 26.7%;
+	margin: 0 auto;
+}
 .container{
-    margin-left: 37%;
     display: inline-block;
     color: white;
     font-size: 35px;
