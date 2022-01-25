@@ -8,13 +8,22 @@ body {
     color: white;
     font-size: 35px;
     position: relative;
-    animation-name: head;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: head;
+            animation-name: head;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 }
 .container:hover{
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#f43b47), to(#453a94));
+    background-image: -o-linear-gradient(bottom, #f43b47 0%, #453a94 100%);
     background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
     border-radius: 10px;
+}
+@-webkit-keyframes head {
+    0%{top: -60px;}
+    100%{top: 80px;}
 }
 @keyframes head {
     0%{top: -60px;}
@@ -27,9 +36,16 @@ body {
     margin-top: 120px;
     text-align: center;
     position: relative;
-    animation-name: loading;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: loading;
+            animation-name: loading;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+@-webkit-keyframes loading {
+    0%{left: -1000px;}
+    100%{left: 0;}
 }
 @keyframes loading {
     0%{left: -1000px;}
@@ -43,23 +59,34 @@ body {
     position: relative;
 }
 .spinner div {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     position: absolute;
     width: 100%;
     height: 100%;
     border: 6px solid transparent;
     border-top-color: white;
     border-radius: 50%;
-    animation: spinnerOne 1.2s linear infinite;
+    -webkit-animation: spinnerOne 1.2s linear infinite;
+            animation: spinnerOne 1.2s linear infinite;
+}
+@-webkit-keyframes spinnerOne {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); border-width: 10px; }
+    50% { -webkit-transform: rotate(180deg); transform: rotate(180deg); border-width: 1px; }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); border-width: 10px; }
 }
 @keyframes spinnerOne {
-    0% { transform: rotate(0deg); border-width: 10px; }
-    50% { transform: rotate(180deg); border-width: 1px; }
-    100% { transform: rotate(360deg); border-width: 10px; }
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); border-width: 10px; }
+    50% { -webkit-transform: rotate(180deg); transform: rotate(180deg); border-width: 1px; }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); border-width: 10px; }
 }
 .loading {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .cat {
     margin: 60px auto;
@@ -67,26 +94,31 @@ body {
 	height: 170px;
 	width: calc(170px * 1.13);
 	background-color: #000000;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .ear {
 	height: 50%;
 	width: 25%;
 	background: #ffffff;
-	border-radius: 30% 70% 0% 0% / 100% 100% 0% 0%;
+    border-radius: 30% 70% 0% 0% / 100% 100% 0% 0%;
 }
 .leftear {
-	transform: rotate(-15deg);
+	-webkit-transform: rotate(-15deg);
+	    -ms-transform: rotate(-15deg);
+	        transform: rotate(-15deg);
 	position: absolute;
 	top: -20%;
 	left: -7%;
 }
 .rightear {
-	border-radius: 30% 70% 0% 0% / 100% 100% 0% 0%;
 	position: absolute;
 	top: -20%;
 	right: -7%;
-	transform: rotate(15deg);
+	-webkit-transform: rotate(15deg);
+	    -ms-transform: rotate(15deg);
+	        transform: rotate(15deg);
 }
 .catface {
 	position: absolute;
@@ -148,18 +180,30 @@ body {
 	background-color: #ffffff;
 }
 .iris {
-	animation-name: lookaround;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
+	-webkit-animation-name: lookaround;
+	        animation-name: lookaround;
+	-webkit-animation-duration: 2s;
+	        animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+}
+@-webkit-keyframes lookaround {
+	0% { -webkit-transform: translate(0); transform: translate(0) }
+	5% { -webkit-transform: translate(50%, -25%); transform: translate(50%, -25%) }
+	10% { -webkit-transform: translate(50%, -25%); transform: translate(50%, -25%) }
+	15% { -webkit-transform: translate(-100%, -25%); transform: translate(-100%, -25%) }
+	20% { -webkit-transform: translate(-100%, -25%); transform: translate(-100%, -25%) }
+	25% { -webkit-transform: translate(0, 0); transform: translate(0, 0) }
+	100% { -webkit-transform: translate(0, 0); transform: translate(0, 0) }
 }
 @keyframes lookaround {
-	0% { transform: translate(0) }
-	5% { transform: translate(50%, -25%) }
-	10% { transform: translate(50%, -25%) }
-	15% { transform: translate(-100%, -25%) }
-	20% { transform: translate(-100%, -25%) }
-	25% { transform: translate(0, 0) }
-	100% { transform: translate(0, 0) }
+	0% { -webkit-transform: translate(0); transform: translate(0) }
+	5% { -webkit-transform: translate(50%, -25%); transform: translate(50%, -25%) }
+	10% { -webkit-transform: translate(50%, -25%); transform: translate(50%, -25%) }
+	15% { -webkit-transform: translate(-100%, -25%); transform: translate(-100%, -25%) }
+	20% { -webkit-transform: translate(-100%, -25%); transform: translate(-100%, -25%) }
+	25% { -webkit-transform: translate(0, 0); transform: translate(0, 0) }
+	100% { -webkit-transform: translate(0, 0); transform: translate(0, 0) }
 }
 .nose {
 	height: 20%;
